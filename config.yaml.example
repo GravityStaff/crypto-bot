@@ -1,0 +1,16 @@
+# rpc endpoint (use alchemy or infura or your own node)
+rpc_url: "https://eth-mainnet.g.alchemy.com/v2/your-api-key"
+
+# hex string, keep this safe
+private_key: "0x0000000000000000000000000000000000000000000000000000000000000000"
+
+# pool to watch (Uniswap V2/V3 format addresses)
+pools:
+  - address: "0x..."
+    threshold_percent: 2.5
+    chain_id: 1
+
+# db settings for order history
+database_url: "sqlite:///./orders.db"
+
+poll_interval: 12 # seconds
