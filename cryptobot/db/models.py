@@ -16,3 +16,9 @@ class Trade(Base):
     timestamp = Column(DateTime, default=datetime.utcnow)
     status = Column(String, default="pending")
 
+class Balance(Base):
+    __tablename__ = "balances"
+
+    token = Column(String, primary_key=True)
+    amount = Column(Float, default=0.0)
+    last_updated = Column(DateTime, onupdate=datetime.utcnow)
