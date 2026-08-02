@@ -10,10 +10,8 @@ class PoolConfig(BaseModel):
 class Settings(BaseSettings):
     rpc_url: str
     private_key: SecretStr
+    db_url: str = "sqlite:///./orders.db"
     poll_interval: int = 10
     pools: List[PoolConfig] = []
 
-    model_config = SettingsConfigDict(yaml_file="config.yaml")
-
-# global instance to be populated on startup
-settings = None
+    model_config = SettingsConfigDict(env_prefix="BOT_")
