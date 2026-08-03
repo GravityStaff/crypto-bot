@@ -4,13 +4,18 @@ rpc_url: "https://eth-mainnet.g.alchemy.com/v2/your-api-key"
 # hex string, keep this safe
 private_key: "0x0000000000000000000000000000000000000000000000000000000000000000"
 
-# pool to watch (Uniswap V2/V3 format addresses)
+# pool to watch
 pools:
   - address: "0x..."
     threshold_percent: 2.5
     chain_id: 1
 
+# max gas price in gwei we're willing to pay
+max_gas_price: 50
+
 # db settings for order history
 database_url: "sqlite:///./orders.db"
 
-poll_interval: 12 # seconds
+poll_interval: 12
+
+# debug: true # uncomment if you want verbose logs
