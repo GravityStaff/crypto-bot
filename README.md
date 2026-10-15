@@ -19,4 +19,3 @@ crypto-bot --config config.yaml
 - prometheus metrics for price tracking
 
 It doesn't have a UI. If you want a UI, use a browser.
- 
